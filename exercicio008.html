@@ -1,0 +1,52 @@
+
+<!-- 
+    Este exercício trabalha tags semânticas e não semânticaspara formatação de texto. 
+    Também fizemos uma modificação via css no head, super simples, apenas para exemplificar
+    -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formatação de Textos</title>
+    <link rel="icon" href="imagens/love.ico">
+
+<!-- No texto abaixo fizemos uma alteração na cor padrão da marcação, que é amarela, através do parâmetro de css style="background-color" -->
+    <style>
+    mark {
+        background-color:plum
+    }
+     </style>
+    
+</head>
+<body>
+    <h1>Principais Formatações</h1>
+
+    <h2>Negrito/Destaque</h2>
+    <p>Nesta frase, temos um <b>termo em negrito</b> usando a tag &lt;b&gt;, não semântica. </p>
+    <p>Nesta frase, temos um <strong>termo em destaque</strong> usando a tag &lt;strong&gt;, que é semântica</p>
+
+    <h2>Itálico/Ênfase</h2>
+    <p>Nesta frase, temos um termo <i>termo em itálico</i> usando a tag &lt;i&gt;,não semântica.<p>
+    <p>Nesta frase, temos um <em>termo em ênfase</em> usando a tag &lt;em&gt;, que é samantica</p>
+
+    <h2>Texto Marcado</h2>
+    <p>Nesta frase, temos um <mark style="background-color:blueviolet"> texto marcado</mark> usando a tag &lt;mark&gt;</p> 
+    <!-- No texto acima fizemos uma alteração pontual na cor da marcação que havíamos definido em head -->
+    <p>Nesta frase, temos um <mark>termo marcado</mark> com a cor de marcação que definimos por css em head</p>
+
+    <h2>Texto e pequeno</h2>
+    <p>Nesta frase, temos um <small>texto pequeno</small> criado com a tag &lt;small&gt;</p>
+    <!-- Importante mencionar que a tag big que seria usada para texto grande está obsoleta no html -->
+
+    <h2>Texto Deletado e Texto Inserido</h2>
+    <p>Podemos marcar um <del>texto excluido</del> para indicar que ele deve ser lido mas não considerado. Usamos a tag &lt;del&gt;</p>
+    <p>Podemos marcar um <ins>texto incluido</ins> para indicar que ele foi adicionado depois.Usamos a tag &lt;ins&gt;</p>
+
+    <h2>Texto sobrescrito e subscrito </h2>
+    <p>Usamos a tag &lt;sup&gt; para texto <sup>sobrescrito</sup>.</p>
+    <p>Usamos a tag &lt;sub&gt; para texto <sub>subescrito</sub>.</p>
+</body>
+</html>
