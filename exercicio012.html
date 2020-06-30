@@ -1,0 +1,49 @@
+<!-- 
+    Este exercício trabalha imagem dinâmica de acordo com o tamanho disponivel para visualização. Também trabalha reprodução de audio e video  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir este site em vários dispositivos diferentes ou simplesmente aumente e diminua o seu navegador.</p>
+    <p>Clica na imagem tb, ela te levará a uma página com um video.</p>
+
+    <a href="ex012_anexo.html">
+    <picture>
+        <source media="(max-width: 700px)" srcset="imagens/img_p.png" type="image/png">
+        <source media="(max-width: 1000px)" srcset="imagens/img_m.png" type="image/png">
+        <img src="imagens/img_g.png" alt="Imagem de teste G">
+    </picture>
+    </a>
+
+    <!--primeira maneira é a comentada abaixo mas não tem compatibilidade com todos os navegadores
+
+    <h1>Agora vamos reproduzir um audio</h1>
+    <audio src="audio_video/Let_It_Happen.mp3" controls></audio>   
+
+    -->
+
+    <h1>Agora vamos reproduzir um audio</h1>
+    <audio preload="metadata" controls> <!--esse tipo de preload faz com que o arquivo só baixe se o usuário apertar o play não baixando desnecessariamente o audio-->
+        <source src="audio_video/Let_It_Happen.mp3" type="audio/mpeg">
+            <!-- se tiver outros tipos de extensões para outros audios, como ogg e wav pode colocar aqui de maneira para tornar compatível com vários navegadores-->
+            <p>Navegador não compativel com a reprodução de audios</p>
+    </audio>
+
+    <h1>Agora vamos reproduzir um video</h1>
+    <video width="400" controls>
+        <source src="audio_video/video.mp4" type="video/mp4"> 
+            <p>Navegador não compativel com a reprodução de videos</p>
+    </video>
+    <!-- a técnica acima consome muito. A hospedagem de video local não é indicada-->
+
+    <h1>Agora reprodução de um video que está no youtube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/P8LxrpNQrTU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+</html>
